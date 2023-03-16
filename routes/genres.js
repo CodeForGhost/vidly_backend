@@ -11,8 +11,8 @@ router.post("/", async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error);
 
-  let genre = new Genre({ name: req.body.name });
-  genre = await genre.save();
+  const genre = new Genre({ name: req.body.name });
+  // genre = await genre.save();
   res.send(genre);
 });
 

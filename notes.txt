@@ -1,0 +1,7 @@
+_id: 64131d79252065cfa09a1488
+
+12 bytes
+    4 bytes: timestamp
+    3 bytes: machine identifier
+    2 bytes: process identifier
+    3 bytes: counter
