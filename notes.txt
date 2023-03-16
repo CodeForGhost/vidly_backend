@@ -5,3 +5,14 @@ _id: 64131d79252065cfa09a1488
     3 bytes: machine identifier
     2 bytes: process identifier
     3 bytes: counter
+
+
+the id will auto set by mongoose... 
+
+Authentication 
+    process of identifying the user who they are (login part)
+
+Authorization
+    user have right permission to perform actions (browsing part)
+
+joi-password-complexity for symbol upper and lower case checking in password
