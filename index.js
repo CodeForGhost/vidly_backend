@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const Joi = require("joi");
 Joi.objectId = require("joi-objectid")(Joi);
 const config = require("config");
+require("express-async-errors");
 
 const genres = require("./routes/genres");
 const customers = require("./routes/customers");
@@ -11,6 +12,8 @@ const movies = require("./routes/movies");
 const rentals = require("./routes/rentals");
 const users = require("./routes/users");
 const auth = require("./routes/auth");
+
+const error = require("./middleware/error");
 
 if (!config.get("jwtPrivateKey")) {
   console.error(
@@ -36,6 +39,8 @@ app.use("/api/movies/", movies);
 app.use("/api/rentals/", rentals);
 app.use("/api/users/", users);
 app.use("/api/auth", auth);
+
+app.use(error);
 
 app.get("/", (req, res) => {
   res.send("Welcome to Vidly app");
