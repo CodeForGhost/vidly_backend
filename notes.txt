@@ -22,3 +22,6 @@ export or set is not working on this
 set vidly_jwtPrivateKey=ghost
 use this
 $env:vidly_jwtPrivateKey="ghost"
+
+arrow functions are standalone function so they don't get the "this" from class...
+so we want to use normal function like function(){}
