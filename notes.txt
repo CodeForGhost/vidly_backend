@@ -16,3 +16,9 @@ Authorization
     user have right permission to perform actions (browsing part)
 
 joi-password-complexity for symbol upper and lower case checking in password
+
+
+export or set is not working on this
+set vidly_jwtPrivateKey=ghost
+use this
+$env:vidly_jwtPrivateKey="ghost"
